@@ -91,7 +91,7 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ MILLARGS ].insert("mill-speed", ui->millspeedSpinBox);
     args[ MILLARGS ].insert("offset", ui->offsetDoubleSpinBox);
     args[ MILLARGS ].insert("voronoi", ui->voronoiCheckBox);
-    args[ MILLARGS ].insert("extra-passes", ui->extrapassesSpinBox);
+    args[ MILLARGS ].insert("isolation-width", ui->isolationwidthDoubleSpinBox);
 
     args[ DRILLARGS ].insert("zdrill", ui->zdrillDoubleSpinBox);
     args[ DRILLARGS ].insert("drill-feed", ui->drillfeedSpinBox);
@@ -244,7 +244,6 @@ void MainWindow::checkPcb2gcodeVersion()
 
 void MainWindow::voronoiEnable(bool enable)
 {
-    ui->extrapassesSpinBox->setEnabled(!enable);
     ui->offsetDoubleSpinBox->setEnabled(!enable);
 }
 
@@ -484,6 +483,7 @@ void MainWindow::changeMetricInputUnits(bool metric)
                                                   ui->zcutDoubleSpinBox, ui->cutinfeedDoubleSpinBox,
                                                   ui->bridgesDoubleSpinBox, ui->zbridgesDoubleSpinBox, ui->alxDoubleSpinBox,
                                                   ui->alyDoubleSpinBox, ui->toleranceDoubleSpinBox, ui->optimiseDoubleSpinBox,
+                                                  ui->isolationwidthDoubleSpinBox,
                                                   ui->mirroraxisDoubleSpinBox };
 
     QSpinBox *spinBoxes[] = { ui->millfeedSpinBox, ui->drillfeedSpinBox, ui->cutfeedSpinBox, ui->cutvertfeedSpinBox, ui->alprobefeedSpinBox };
