@@ -78,14 +78,14 @@
            </rect>
           </property>
           <layout class="QGridLayout" name="inputFilesGridLayout">
-           <item row="5" column="1">
+           <item row="4" column="1">
             <widget class="QLineEdit" name="preambletextLineEdit">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode text preamble file, inserted at the very beginning (before the preamble) as a comment. All the rounded parenthesis will be converted to angled parenthesis (due to gcode's comments limitations). You can use this to include the license header at the top of the gcode output files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="2">
+           <item row="4" column="2">
             <widget class="QPushButton" name="preambletextPushButton">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode text preamble file, inserted at the very beginning (before the preamble) as a comment. All the rounded parenthesis will be converted to angled parenthesis (due to gcode's comments limitations). You can use this to include the license header at the top of the gcode output files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -139,7 +139,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="2">
+           <item row="5" column="2">
             <widget class="QPushButton" name="preamblePushButton">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode preamble file, inserted at the very beginning&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -233,7 +233,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
+           <item row="5" column="0">
             <widget class="QLabel" name="preambleLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode preamble file, inserted at the very beginning&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -249,7 +249,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="5" column="1">
             <widget class="QLineEdit" name="preambleLineEdit">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode preamble file, inserted at the very beginning&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -296,7 +296,7 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
+           <item row="4" column="0">
             <widget class="QLabel" name="preambletextLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gcode text preamble file, inserted at the very beginning (before the preamble) as a comment. All the rounded parenthesis will be converted to angled parenthesis (due to gcode's comments limitations). You can use this to include the license header at the top of the gcode output files&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>

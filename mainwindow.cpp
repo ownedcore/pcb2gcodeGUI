@@ -67,8 +67,8 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ FILEARGS ].insert("back", ui->backLineEdit);
     args[ FILEARGS ].insert("outline", ui->outlineLineEdit);
     args[ FILEARGS ].insert("drill", ui->drillLineEdit);
-    args[ FILEARGS ].insert("preamble", ui->preambleLineEdit);
     args[ FILEARGS ].insert("preamble-text", ui->preambletextLineEdit);
+    args[ FILEARGS ].insert("preamble", ui->preambleLineEdit);
     args[ FILEARGS ].insert("postamble", ui->postambleLineEdit);
     args[ FILEARGS ].insert("output-dir", ui->outputDirLineEdit);
 
@@ -143,8 +143,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->backPushButton, SIGNAL(clicked()), this, SLOT(getBackFile()));
     connect(ui->outlinePushButton, SIGNAL(clicked()), this, SLOT(getOutlineFile()));
     connect(ui->drillPushButton, SIGNAL(clicked()), this, SLOT(getDrillFile()));
-    connect(ui->preamblePushButton, SIGNAL(clicked()), this, SLOT(getPreambleFile()));
     connect(ui->preambletextPushButton, SIGNAL(clicked()), this, SLOT(getPreambletextFile()));
+    connect(ui->preamblePushButton, SIGNAL(clicked()), this, SLOT(getPreambleFile()));
     connect(ui->postamblePushButton, SIGNAL(clicked()), this, SLOT(getPostambleFile()));
     connect(ui->outputDirPushButton, SIGNAL(clicked()), this, SLOT(getOutputDirectory()));
 
@@ -290,14 +290,14 @@ void MainWindow::getDrillFile()
             generateImages();
 }
 
-void MainWindow::getPreambleFile()
-{
-    getPreFilename(ui->preambleLineEdit, tr("preamble file"), gcode_file_filter);
-}
-
 void MainWindow::getPreambletextFile()
 {
     getPreFilename(ui->preambletextLineEdit, tr("preamble text file"), text_file_filter);
+}
+
+void MainWindow::getPreambleFile()
+{
+    getPreFilename(ui->preambleLineEdit, tr("preamble file"), gcode_file_filter);
 }
 
 void MainWindow::getPostambleFile()
