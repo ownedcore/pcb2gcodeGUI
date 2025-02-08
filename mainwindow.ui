@@ -42,7 +42,7 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>545</width>
+          <width>500</width>
           <height>600</height>
          </size>
         </property>
@@ -64,7 +64,7 @@
         <property name="elideMode">
          <enum>Qt::ElideNone</enum>
         </property>
-        <widget class="QWidget" name="tab_3">
+        <widget class="QWidget" name="inoutTab">
          <attribute name="title">
           <string>Input/output</string>
          </attribute>
@@ -73,8 +73,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>421</width>
-            <height>550</height>
+            <width>480</width>
+            <height>600</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="inputFilesGridLayout">
@@ -160,7 +160,7 @@
             </widget>
            </item>
            <item row="2" column="0">
-            <widget class="QLabel" name="outlinLabel">
+            <widget class="QLabel" name="outlineLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cut out the board to the shape exposed in the given file. Typically, there is only a polygon in this gerber file. Alternatively, this file can contain a closed line chain (see outline -&amp;gt; fill-outline)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
@@ -374,8 +374,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>531</width>
-            <height>650</height>
+            <width>480</width>
+            <height>600</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="commonGridLayout">
@@ -620,10 +620,10 @@
            <item row="7" column="0">
             <widget class="QLabel" name="optimiseLabel">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--optimise&lt;/span&gt;&lt;/p&gt;&lt;p&gt;optimise output gcode, reducing its output size up to 40%, while accepting a very little loss of precision&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--optimise&lt;/span&gt;&lt;/p&gt;&lt;p&gt;optimise output gcode, reducing its output size up to 40%, while accepting a very little loss of precision.&lt;br /&gt;Set to 0 to disable.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
-              <string>optimise val</string>
+              <string>Optimisation Value</string>
              </property>
              <property name="buddy">
               <cstring>optimiseDoubleSpinBox</cstring>
@@ -636,7 +636,7 @@
               <bool>true</bool>
              </property>
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--optimise&lt;/span&gt;&lt;/p&gt;&lt;p&gt;optimise output gcode, reducing its output size up to 40%, while accepting a very little loss of precision&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--optimise&lt;/span&gt;&lt;/p&gt;&lt;p&gt;optimise output gcode, reducing its output size up to 40%, while accepting a very little loss of precision.&lt;br /&gt;Set to 0 to disable.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="suffix">
               <string> mm </string>
@@ -715,10 +715,10 @@
            <item row="10" column="0" colspan="2">
             <widget class="QCheckBox" name="mirroryaxisCheckBox">
              <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mirror-yaxis&lt;/span&gt;&lt;/p&gt;&lt;p&gt;mirror Y axis instead of X&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mirror-yaxis&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Mirror on Y axis instead of X axis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
-              <string>mirror Y axis instead of X</string>
+              <string>Mirror on Y axis instead of X axis</string>
              </property>
             </widget>
            </item>
@@ -813,8 +813,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>430</width>
-            <height>411</height>
+            <width>480</width>
+            <height>600</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="millGridLayout">
@@ -1022,8 +1022,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>522</width>
-            <height>421</height>
+            <width>480</width>
+            <height>600</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="drillGridLayout">
@@ -1282,8 +1282,8 @@
            <rect>
             <x>10</x>
             <y>10</y>
-            <width>504</width>
-            <height>553</height>
+            <width>480</width>
+            <height>600</height>
            </rect>
           </property>
           <layout class="QGridLayout" name="outlineGridLayout">
