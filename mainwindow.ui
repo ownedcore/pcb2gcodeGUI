@@ -824,14 +824,14 @@
            <property name="verticalSpacing">
             <number>6</number>
            </property>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <widget class="QSpinBox" name="extrapassesSpinBox">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--extra-passes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;number of additional isolation passes For each extra pass, engraving is repeated with the offset width increased by half its original value, creating wider isolation areas. This option is ignored when --voronoi is in use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="5" column="1">
             <widget class="QDoubleSpinBox" name="offsetDoubleSpinBox">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--offset * 2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;distance by which the tool movement will be outset from the contours in the gerber file to be engraved. If you want to obtain a PCB as similar as possible to the original file, you should set this value to half of the tool diameter. If this distance can't be satisfied because copper areas are too close, a warning will be printed and the line will be drawn between the areas. This behavior can be used to get voronoi-style (flood-filling) areas; sim‐ply set the offset to a large value (like 1 inch). When the vectorial mode is in use, --voronoi is preferred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -881,7 +881,7 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
+           <item row="1" column="1">
             <widget class="QDoubleSpinBox" name="millinfeedDoubleSpinBox">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth.&lt;br /&gt; PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -906,7 +906,7 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
+           <item row="2" column="1">
             <widget class="QSpinBox" name="millfeedSpinBox">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Feed rate at which engraving takes place (horizontal speed)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -925,7 +925,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
+           <item row="5" column="0">
             <widget class="QLabel" name="offsetLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--offset * 2&lt;/span&gt;&lt;/p&gt;&lt;p&gt;distance by which the tool movement will be outset from the contours in the gerber file to be engraved. If you want to obtain a PCB as similar as possible to the original file, you should set this value to half of the tool diameter. If this distance can't be satisfied because copper areas are too close, a warning will be printed and the line will be drawn between the areas. This behavior can be used to get voronoi-style (flood-filling) areas; sim‐ply set the offset to a large value (like 1 inch). When the vectorial mode is in use, --voronoi is preferred.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -938,7 +938,7 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0">
+           <item row="2" column="0">
             <widget class="QLabel" name="millfeedLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-feed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Feed rate at which engraving takes place (horizontal speed)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -964,7 +964,7 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0">
+           <item row="1" column="0">
             <widget class="QLabel" name="millinfeedLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-infeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Maximum milling depth.&lt;br /&gt;PCB may be cut in multiple passes&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -977,7 +977,7 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="0">
+           <item row="3" column="0">
             <widget class="QLabel" name="millspeedLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -990,7 +990,7 @@
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
+           <item row="6" column="0">
             <widget class="QLabel" name="extrapassesLabel">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--extra-passes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;number of additional isolation passes For each extra pass, engraving is repeated with the offset width increased by half its original value, creating wider isolation areas. This option is ignored when --voronoi is in use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1003,7 +1003,7 @@
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
+           <item row="3" column="1">
             <widget class="QSpinBox" name="millspeedSpinBox">
              <property name="toolTip">
               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-speed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spindle speed during engraving&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1022,7 +1022,7 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="0">
+           <item row="4" column="0">
             <widget class="QCheckBox" name="voronoiCheckBox">
              <property name="enabled">
               <bool>true</bool>
