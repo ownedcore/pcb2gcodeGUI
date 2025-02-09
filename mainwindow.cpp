@@ -87,6 +87,7 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ COMMONARGS ].insert("tile-y", ui->tileySpinBox);
 
     args[ MILLARGS ].insert("zwork", ui->zworkDoubleSpinBox);
+    args[ MILLARGS ].insert("mill-infeed", ui->millinfeedDoubleSpinBox);
     args[ MILLARGS ].insert("mill-feed", ui->millfeedSpinBox);
     args[ MILLARGS ].insert("mill-speed", ui->millspeedSpinBox);
     args[ MILLARGS ].insert("offset", ui->offsetDoubleSpinBox);
@@ -484,6 +485,7 @@ void MainWindow::changeMetricInputUnits(bool metric)
                                                   ui->zcutDoubleSpinBox, ui->cutinfeedDoubleSpinBox,
                                                   ui->bridgesDoubleSpinBox, ui->zbridgesDoubleSpinBox, ui->alxDoubleSpinBox,
                                                   ui->alyDoubleSpinBox, ui->toleranceDoubleSpinBox, ui->optimiseDoubleSpinBox,
+                                                  ui->millinfeedDoubleSpinBox,
                                                   ui->mirroraxisDoubleSpinBox };
 
     QSpinBox *spinBoxes[] = { ui->millfeedSpinBox, ui->drillfeedSpinBox, ui->cutfeedSpinBox, ui->cutvertfeedSpinBox, ui->alprobefeedSpinBox };
