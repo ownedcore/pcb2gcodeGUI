@@ -973,7 +973,7 @@
               <string>Milling depth per pass</string>
              </property>
              <property name="buddy">
-              <cstring>zworkDoubleSpinBox</cstring>
+              <cstring>millinfeedDoubleSpinBox</cstring>
              </property>
             </widget>
            </item>
