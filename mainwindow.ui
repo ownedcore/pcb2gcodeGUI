@@ -997,7 +997,39 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0" colspan="2">
+           <item row="6" column="0">
+            <widget class="QLabel" name="millvertfeedLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Vertical feed while isolating.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Vertical mill speed</string>
+             </property>
+             <property name="buddy">
+              <cstring>millvertfeedSpinBox</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QSpinBox" name="millvertfeedSpinBox">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--mill-vertfeed&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Vertical feed while isolating.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="suffix">
+              <string> mm/min</string>
+             </property>
+             <property name="maximum">
+              <number>10000</number>
+             </property>
+             <property name="singleStep">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
             <spacer name="verticalSpacer_3">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -2283,6 +2315,7 @@
   <tabstop>voronoiCheckBox</tabstop>
   <tabstop>offsetDoubleSpinBox</tabstop>
   <tabstop>extrapassesSpinBox</tabstop>
+  <tabstop>millvertfeedSpinBox</tabstop>
   <tabstop>zdrillDoubleSpinBox</tabstop>
   <tabstop>drillfeedSpinBox</tabstop>
   <tabstop>drillspeedSpinBox</tabstop>
