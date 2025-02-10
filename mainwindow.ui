@@ -997,7 +997,20 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0" colspan="2">
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="drawlinesCheckBox">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--draw-gerber-lines&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Draw lines in gerber file as just lines and not filled in shapes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Draw Gerber as lines</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
             <spacer name="verticalSpacer_3">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -2283,6 +2296,7 @@
   <tabstop>voronoiCheckBox</tabstop>
   <tabstop>offsetDoubleSpinBox</tabstop>
   <tabstop>extrapassesSpinBox</tabstop>
+  <tabstop>drawlinesCheckBox</tabstop>
   <tabstop>zdrillDoubleSpinBox</tabstop>
   <tabstop>drillfeedSpinBox</tabstop>
   <tabstop>drillspeedSpinBox</tabstop>
