@@ -57,6 +57,9 @@ MainWindow::MainWindow(QWidget *parent) :
     inputUnits.addButton(ui->inputImperialRadioButton, 1);
     outputUnits.addButton(ui->outputMetricRadioButton, 0);
     outputUnits.addButton(ui->outputImperialRadioButton, 1);
+    milldirUnits.addButton(ui->milldiranyRadioButton, 0);
+    milldirUnits.addButton(ui->milldirclimbRadioButton, 1);
+    milldirUnits.addButton(ui->milldirconventionalRadioButton, 2);
 
     pcb2gcodeProcess.setProcessChannelMode(QProcess::MergedChannels);
     pcb2gcodeImageProcess.setProcessChannelMode(QProcess::MergedChannels);
@@ -92,6 +95,7 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ MILLARGS ].insert("offset", ui->offsetDoubleSpinBox);
     args[ MILLARGS ].insert("voronoi", ui->voronoiCheckBox);
     args[ MILLARGS ].insert("extra-passes", ui->extrapassesSpinBox);
+    //args[ MILLARGS ].insert("mill-feed-direction", ui->milldiranyRadioButton);
 
     args[ DRILLARGS ].insert("zdrill", ui->zdrillDoubleSpinBox);
     args[ DRILLARGS ].insert("drill-feed", ui->drillfeedSpinBox);

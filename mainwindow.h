@@ -99,6 +99,7 @@ private:
 
     QButtonGroup inputUnits;
     QButtonGroup outputUnits;
+    QButtonGroup milldirUnits;
     QButtonGroup mirrorType;
 
     const QString pcb2gcodeVersion;
