@@ -134,10 +134,20 @@ bool argBase<QButtonGroup>::setValue(const QString value)
 template<>
 QString argBase<QButtonGroup>::getValue()
 {
-    if(object->checkedId() == 0)
-        return "true";
+    // if more then 2 buttons are in a group
+    // assume we want the text of the selected
+    // Button
+    if(object->buttons().length() > 2)
+    { 
+        return object->button(object->checkedId())->text();
+    }
     else
-        return "false";
+    {
+        if(object->checkedId() == 0)
+            return "true";
+        else
+            return "false";
+    }
 }
 
 template<>
