@@ -92,6 +92,8 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ MILLARGS ].insert("offset", ui->offsetDoubleSpinBox);
     args[ MILLARGS ].insert("voronoi", ui->voronoiCheckBox);
     args[ MILLARGS ].insert("extra-passes", ui->extrapassesSpinBox);
+    args[ MILLARGS ].insert("pre-milling-gcode", ui->premillingLineEdit);
+    args[ MILLARGS ].insert("post-milling-gcode", ui->postmillingLineEdit);
 
     args[ DRILLARGS ].insert("zdrill", ui->zdrillDoubleSpinBox);
     args[ DRILLARGS ].insert("drill-feed", ui->drillfeedSpinBox);

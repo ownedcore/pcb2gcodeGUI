@@ -997,7 +997,53 @@
              </property>
             </widget>
            </item>
-           <item row="6" column="0" colspan="2">
+           <item row="6" column="0">
+            <widget class="QLabel" name="premillingLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Custom gcode inserted before the start of milling each trace.&lt;s&gt; Use a at sign (@) to insert a newline&lt;/s&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Add before trace milling</string>
+             </property>
+             <property name="buddy">
+              <cstring>premillingLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLineEdit" name="premillingLineEdit">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--pre-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Custom gcode inserted before the start of milling each trace.&lt;s&gt; Use a at sign (@) to insert a newline&lt;/s&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="postmillingLabel">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Custom gcode inserted after the end of milling each trace.&lt;s&gt; Use a at sign (@) to insert a newline&lt;/s&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Add after trace milling</string>
+             </property>
+             <property name="buddy">
+              <cstring>postmillingLineEdit</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLineEdit" name="postmillingLineEdit">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;--post-milling-gcode&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Custom gcode inserted after the end of milling each trace.&lt;s&gt; Use a at sign (@) to insert a newline&lt;/s&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="2">
             <spacer name="verticalSpacer_3">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -2283,6 +2329,8 @@
   <tabstop>voronoiCheckBox</tabstop>
   <tabstop>offsetDoubleSpinBox</tabstop>
   <tabstop>extrapassesSpinBox</tabstop>
+  <tabstop>premillingLineEdit</tabstop>
+  <tabstop>postmillingLineEdit</tabstop>
   <tabstop>zdrillDoubleSpinBox</tabstop>
   <tabstop>drillfeedSpinBox</tabstop>
   <tabstop>drillspeedSpinBox</tabstop>
