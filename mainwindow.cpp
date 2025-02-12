@@ -487,7 +487,7 @@ void MainWindow::changeMetricInputUnits(bool metric)
                                                   ui->alyDoubleSpinBox, ui->toleranceDoubleSpinBox, ui->optimiseDoubleSpinBox,
                                                   ui->mirroraxisDoubleSpinBox };
 
-    QSpinBox *spinBoxes[] = { ui->millfeedSpinBox, ui->drillfeedSpinBox, ui->cutfeedSpinBox, ui->cutvertfeedSpinBox, ui->alprobefeedSpinBox };
+    QSpinBox *spinBoxes[] = { ui->millfeedSpinBox, ui->drillfeedSpinBox, ui->cutfeedSpinBox, ui->cutvertfeedSpinBox, ui->alprobefeedSpinBox, ui->millvertfeedSpinBox };
 
     const unsigned int doubleSpinBoxesLen =  sizeof(doubleSpinBoxes) / sizeof(doubleSpinBoxes[0]);
     const unsigned int spinBoxesLen =  sizeof(spinBoxes) / sizeof(spinBoxes[0]);
