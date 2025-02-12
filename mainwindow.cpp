@@ -92,6 +92,7 @@ MainWindow::MainWindow(QWidget *parent) :
     args[ MILLARGS ].insert("offset", ui->offsetDoubleSpinBox);
     args[ MILLARGS ].insert("voronoi", ui->voronoiCheckBox);
     args[ MILLARGS ].insert("extra-passes", ui->extrapassesSpinBox);
+    args[ MILLARGS ].insert("mill-diameters", ui->milldiametersLineEdit);
 
     args[ DRILLARGS ].insert("zdrill", ui->zdrillDoubleSpinBox);
     args[ DRILLARGS ].insert("drill-feed", ui->drillfeedSpinBox);
@@ -488,8 +489,11 @@ void MainWindow::changeMetricInputUnits(bool metric)
 
     QSpinBox *spinBoxes[] = { ui->millfeedSpinBox, ui->drillfeedSpinBox, ui->cutfeedSpinBox, ui->cutvertfeedSpinBox, ui->alprobefeedSpinBox };
 
+    QLineEdit *lineEdit[] = { ui->milldiametersLineEdit };
+
     const unsigned int doubleSpinBoxesLen =  sizeof(doubleSpinBoxes) / sizeof(doubleSpinBoxes[0]);
     const unsigned int spinBoxesLen =  sizeof(spinBoxes) / sizeof(spinBoxes[0]);
+    const unsigned int lineEditLen =  sizeof(lineEdit) / sizeof(lineEdit[0]);
     const double cfactor = metric ? 25.4 : 1/25.4;
     const char *distance = metric ? " mm" : " in" ;
     const char *speed = metric ? " mm/min" : " in/min" ;
@@ -499,6 +503,9 @@ void MainWindow::changeMetricInputUnits(bool metric)
 
     for( unsigned int i = 0; i < spinBoxesLen; i++ )
         adjustMetricImperial( spinBoxes[i], cfactor, speed );
+
+    for( unsigned int i = 0; i < lineEditLen; i++ )
+        adjustMetricImperial( lineEdit[i], cfactor);
 }
 
 void MainWindow::adjustMetricImperial(QSpinBox *spinBox, const double cfactor, const QString suffix)
@@ -545,6 +552,37 @@ void MainWindow::adjustMetricImperial(QDoubleSpinBox *doubleSpinBox, const doubl
     }
 
     doubleSpinBox->setSuffix(suffix);
+}
+
+void MainWindow::adjustMetricImperial(QLineEdit *lineEdit, const double cfactor)
+{
+    QString result;
+    double value;
+
+    if( changeMetricImperialValues )
+    {
+        if( lineEdit->text().contains(",") )
+        {
+            QStringList elements = lineEdit->text().split(",");
+    
+            foreach( QString element, elements )
+            {
+                value = element.toDouble() * cfactor;
+                result += QString::number(value, 'g', 3); 
+                result += ",";
+            }
+
+            // remove trailing ","
+            result.chop(1);
+        }            
+        else
+        {
+            result = QString::number(lineEdit->text().toDouble() * cfactor, 'g', 3);
+        }
+
+        lineEdit->setText(result);
+    }
+
 }
 
 QStringList MainWindow::getCmdLineArguments()

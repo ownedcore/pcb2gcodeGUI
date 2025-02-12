@@ -134,6 +134,7 @@ private:
     bool getPreFilename(QLineEdit *saveTo, const QString name, QString filter);
     void adjustMetricImperial(QSpinBox *spinBox, const double cfactor, const QString suffix);
     void adjustMetricImperial(QDoubleSpinBox *doubleSpinBox, const double cfactor, const QString suffix);
+    void adjustMetricImperial(QLineEdit *lineEdit, const double cfactor);
     void saveConfFile(const QString filename);
     bool loadConfFile(const QString filename);
     QString getPcb2gcodeVersion();
