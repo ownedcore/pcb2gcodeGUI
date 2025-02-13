@@ -19,12 +19,15 @@
 
 #include "cmdlineargs.h"
 #include "ui_cmdlineargs.h"
+#include <QClipboard>
 
 CmdLineArgs::CmdLineArgs(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CmdLineArgs)
 {
     ui->setupUi(this);
+
+    connect(ui->copyPushButton, SIGNAL(clicked()), this, SLOT(copyToClipboard()));
 }
 
 CmdLineArgs::~CmdLineArgs()
@@ -35,4 +38,11 @@ CmdLineArgs::~CmdLineArgs()
 void CmdLineArgs::setText(QString text)
 {
     ui->plainTextEdit->setPlainText(text);
+}
+
+void CmdLineArgs::copyToClipboard()
+{
+    QClipboard *clipboard = QGuiApplication::clipboard(); 
+
+    clipboard->setText(ui->plainTextEdit->toPlainText());
 }

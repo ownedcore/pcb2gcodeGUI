@@ -35,6 +35,9 @@ public:
     void setText(QString text);
     ~CmdLineArgs();
 
+private slots:
+    void copyToClipboard();
+
 private:
     Ui::CmdLineArgs *ui;
 };
